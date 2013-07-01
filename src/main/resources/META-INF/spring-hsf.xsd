@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.taobao.com/schema/hsf" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.taobao.com/schema/hsf" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xsd:annotation>
+		<xsd:documentation>
+			<![CDATA[
+				Defines the configuration elements for the Spring Framework's HSF support. 
+			]]>
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:element name="annotation-driven">
+		<xsd:annotation>
+			<xsd:documentation>
+				<![CDATA[
+      				Exports classes who have been annotated with @HSFExport as HSFSpringProvierBean
+      				and field who have been annoted with @HSF as HSFSpringConsumerBean
+        		]]>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name="service-group" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>
+						<![CDATA[
+							Service group attribute to be set globally, defaults to HSF, 
+							support place holder.
+						]]>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="service-version" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>
+						<![CDATA[
+							Service version attribute to be set globally, defaults to 1.0.0, 
+							support place holder.
+						]]>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="client-timeout" type="xsd:integer">
+				<xsd:annotation>
+					<xsd:documentation>
+						<![CDATA[
+							client timeout attribute to be set globally, defaults to 3000ms
+							support place holder.
+						]]>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="client-idle-timeout" type="xsd:integer">
+				<xsd:annotation>
+					<xsd:documentation>
+						<![CDATA[
+							Client idle timeout attribute to be set globally, defaults to 30s
+							support place holder.
+						]]>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
