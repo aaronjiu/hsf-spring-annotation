@@ -183,8 +183,9 @@ public class HSFAnnotationBeanPostProcessor extends InstantiationAwareBeanPostPr
 		this.order = order;
 	}
 
+	@Override
 	public int getOrder() {
-		return this.order;
+		return order;
 	}
 
 }
