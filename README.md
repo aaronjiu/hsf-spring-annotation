@@ -1,4 +1,4 @@
 hsf-spring-annotation
 =====================
 
-A spring extention for supporting hsf annotation.
+A spring extention of hsf annotation.
